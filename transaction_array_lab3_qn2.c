@@ -13,7 +13,7 @@ int main() {
         int transaction = transactions[i];
         
         
-        if (transaction < 0 || balance + transaction < 0) {
+        if (transaction < 0 && balance + transaction < 0) {
             printf("Invalid transaction %d: %d current balance %d \n", i + 1, transaction, balance);
             to_be_processed[num_of_unprocessed++] = transaction;
             continue;
