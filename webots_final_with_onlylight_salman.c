@@ -6,7 +6,7 @@
 
 #define TIME_STEP 64
 #define MAX_SPEED 6.28
-#define RUN_DURATION 720.0 // 12 minutes in seconds (5 * 60)
+#define RUN_DURATION 720.0 // 12 minutes in seconds (12 * 60)
 #define WAIT_DURATION 10.0 // Wait time in seconds
 
 WbDeviceTag left_motor, right_motor; // Initialize motors
@@ -98,7 +98,7 @@ int main() {
     double current_time = wb_robot_get_time();
 
     if (current_time - start_time >= RUN_DURATION) {
-      printf("Stopping after 5 minutes.\n");
+      printf("Stopping after 12 minutes.\n");
       set_speed(0, 0);  // Stop the robot
       wait(WAIT_DURATION);  // Wait for a few seconds
 
